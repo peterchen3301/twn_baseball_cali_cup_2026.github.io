@@ -1,16 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>W3.CSS Template</title>
+<title>Taiwanese Heritage California Cup 2026</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
 <link href="https://fonts.googleapis.com/css2?family=Trend+Sans+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body {font-family: "Times New Roman", Georgia, Serif;}
 h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display";
   letter-spacing: 5px;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  cursor: pointer;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
 }
 </style>
 </head>
@@ -22,8 +64,9 @@ h1, h2, h3, h4, h5, h6 {
     <a href="#home" class="w3-bar-item w3-button">加州盃台灣人棒球錦標賽 Taiwanese Heritage California Cup 2026</a>
     <!-- Right-sided navbar links. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
+      <a href="#About" class="w3-bar-item w3-button">About</a>
       <a href="#history" class="w3-bar-item w3-button">History</a>
-      <a href="#menu" class="w3-bar-item w3-button">Menu</a>
+      <a href="#Schedule" class="w3-bar-item w3-button">Schedule</a>
       <a href="#contact" class="w3-bar-item w3-button">Contact</a>
     </div>
   </div>
@@ -38,9 +81,35 @@ h1, h2, h3, h4, h5, h6 {
 <div class="w3-content" style="max-width:1100px">
 
   <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="About">
+    <div class="w3-col l6 w3-padding-large">
+      <h1 class="w3-center">About</h1><br>
+      <p class="w3-large">
+        本屆加州盃將於2026年5月9日、10日在San Dieguito Sports Complex舉辦。參賽的隊伍有Bay Area Formosan、Los Angeles TW HeyGo
+        、San Diego Manatees、San Diego TNT與SoCal Taiwan。進行為期兩天共8場比賽。
+      </p>
+      <p class="w3-large w3-text-grey w3-hide-medium">
+        This year's California Cup will be held on May 9th and 10th, 2026 at San Dieguito Sports Complex. The 
+        participating teams are Bay Area Formosan, Los Angeles TW HeyGo, San Diego Manatees, San Diego TNT, 
+        and SoCal Taiwan. There will be a total of 8 games over two days.</p>
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1179.0595999381824!2d-117.25610697106465!3d33.07372725846812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc0b70fa36d1e1%3A0xb5961f0d2e47b026!2sSan%20Dieguito%20Sports%20Complex!5e1!3m2!1szh-TW!2sus!4v1776112804350!5m2!1szh-TW!2sus" 
+        width="400" height="150" style="border:0; display: block; margin: 0 auto;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+
+    
+    <div class="w3-col l6 w3-padding-large">
+      <img src="resource\cali_cup_poster.png" class="w3-round w3-image w3-opacity-min" alt="Poster" style="width:100%">
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- History Section -->
   <div class="w3-row w3-padding-64" id="history">
     <div class="w3-col m6 w3-padding-large w3-hide-small">
-     <img src="/w3images/tablesetting2.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+     <img src="resource/cali_cup_2025.jpg" class="w3-round w3-image w3-opacity-min" alt="CaliCup2025" width="400" height="500">
     </div>
 
     <div class="w3-col m6 w3-padding-large">
@@ -57,42 +126,75 @@ h1, h2, h3, h4, h5, h6 {
   </div>
   
   <hr>
-  
-  <!-- Menu Section -->
-  <div class="w3-row w3-padding-64" id="menu">
+
+    <!-- Schedule Section -->
+  <div class="w3-row w3-padding-64" id="Schedule">
     <div class="w3-col l6 w3-padding-large">
-      <h1 class="w3-center">Our Menu</h1><br>
+      <h1 class="w3-center">Schedule</h1><br>
+      <p class="w3-large">
+        敬請期待
+      </p>
+      <p class="w3-large w3-text-grey w3-hide-medium">
+        Coming Soon
+      </p>
     </div>
-    
     <div class="w3-col l6 w3-padding-large">
-      <img src="/w3images/tablesetting.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
     </div>
   </div>
 
   <hr>
+  
+
 
   <!-- Contact Section -->
   <div class="w3-container w3-padding-64" id="contact">
     <h1>Contact</h1><br>
-    <p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.</p>
-    <p class="w3-text-blue-grey w3-large"><b>Catering Service, 42nd Living St, 43043 New York, NY</b></p>
-    <p>You can also contact us by phone 00553123-2323 or email catering@catering.com, or you can send us a message here:</p>
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16" type="number" placeholder="How many people" required name="People"></p>
-      <p><input class="w3-input w3-padding-16" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
-      <p><button class="w3-button w3-light-grey w3-section" type="submit">SEND MESSAGE</button></p>
-    </form>
+    <div class="w3-col l6 w3-padding-large">
+      <p class="w3-hide-medium">陳星宇 </p>
+      <p class="w3-text-grey w3-hide-medium">Hsing-Yu Chen (Peter) </p>
+      <i class="fa fa-map-marker" style="width:30px"></i> San Diego, CA<br>
+      <i class="fa fa-phone" style="width:30px"></i> Phone: +1 858-603-0140<br>
+      <i class="fa fa-envelope" style="width:30px"> </i> Email: peterchen33011@gmail.com<br>
+    </div>
   </div>
+    
   
 <!-- End page content -->
 </div>
 
-<!-- Footer -->
-<footer class="w3-center w3-light-grey w3-padding-32">
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-</footer>
+<!-- Modal for enlarged image -->
+<div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
 
-</body>
-</html>
+<script>
+// Get modal elements
+var modal = document.getElementById("imageModal");
+var modalImg = document.getElementById("modalImage");
+var posterImg = document.querySelector('img[alt="Poster"]');
+var caliCup2025Img = document.querySelector('img[alt="CaliCup2025"]');
+
+// Handle left-click on the poster image
+posterImg.addEventListener('click', function(e) {
+  modal.style.display = "block";
+  modalImg.src = this.src;
+});
+
+caliCup2025Img.addEventListener('click', function(e) {
+  modal.style.display = "block";
+  modalImg.src = this.src;
+});
+
+// Close modal when clicking the close button
+document.querySelector('.close').onclick = function() {
+  modal.style.display = "none";
+}
+
+// Close modal when clicking outside the image
+modal.onclick = function(event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
