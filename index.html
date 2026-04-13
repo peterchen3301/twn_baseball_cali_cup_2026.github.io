@@ -54,6 +54,23 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   cursor: pointer;
 }
+
+/* Mobile responsiveness improvements */
+@media screen and (max-width: 600px) {
+  .w3-bar-item {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  
+  .w3-xxlarge {
+    font-size: 2.5em !important;
+  }
+  
+  .w3-padding-64 {
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+  }
+}
 </style>
 </head>
 <body>
@@ -69,11 +86,20 @@ h1, h2, h3, h4, h5, h6 {
       <a href="#Schedule" class="w3-bar-item w3-button">Schedule</a>
       <a href="#contact" class="w3-bar-item w3-button">Contact</a>
     </div>
+    <!-- Mobile menu button -->
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="toggleMobileMenu()">&#9776;</a>
+  </div>
+  <!-- Mobile menu (hidden by default) -->
+  <div id="mobileMenu" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#About" class="w3-bar-item w3-button" onclick="toggleMobileMenu()">About</a>
+    <a href="#history" class="w3-bar-item w3-button" onclick="toggleMobileMenu()">History</a>
+    <a href="#Schedule" class="w3-bar-item w3-button" onclick="toggleMobileMenu()">Schedule</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleMobileMenu()">Contact</a>
   </div>
 </div>
 
 <!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:2400px;min-width:800px" id="home">
+<header class="w3-display-container w3-content w3-wide" style="max-width:2400px;" id="home">
   <img class="w3-image" src="resource\norcal_socal_header.svg" alt="Califrnia Cup 2026" width="2000" height="500">
 </header>
 
@@ -94,7 +120,7 @@ h1, h2, h3, h4, h5, h6 {
         and SoCal Taiwan. There will be a total of 8 games over two days.</p>
 
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1179.0595999381824!2d-117.25610697106465!3d33.07372725846812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc0b70fa36d1e1%3A0xb5961f0d2e47b026!2sSan%20Dieguito%20Sports%20Complex!5e1!3m2!1szh-TW!2sus!4v1776112804350!5m2!1szh-TW!2sus" 
-        width="400" height="150" style="border:0; display: block; margin: 0 auto;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        width="100%" height="200" style="border:0; display: block; margin: 0 auto; max-width: 400px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
 
@@ -195,6 +221,16 @@ document.querySelector('.close').onclick = function() {
 modal.onclick = function(event) {
   if (event.target === modal) {
     modal.style.display = "none";
+  }
+}
+
+// Mobile menu toggle function
+function toggleMobileMenu() {
+  var menu = document.getElementById("mobileMenu");
+  if (menu.className.indexOf("w3-show") == -1) {
+    menu.className += " w3-show";
+  } else {
+    menu.className = menu.className.replace(" w3-show", "");
   }
 }
 </script>
