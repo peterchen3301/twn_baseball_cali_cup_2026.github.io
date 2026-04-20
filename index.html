@@ -13,6 +13,36 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display";
   letter-spacing: 5px;
 }
+ .footer {
+   background-color: #545454;
+   color: #ffffff;
+   padding: 40px 20px;
+   text-align: center;
+ }
+ .footer h2 {
+   margin-top: 0;
+   font-size: 1.5em;
+ }
+ .footer ul {
+   list-style: none;
+   padding: 0;
+   margin: 1em 0 0;
+ }
+ .footer-images {
+   display: flex;
+   justify-content: center;
+   gap: 1rem;
+   flex-wrap: wrap;
+   margin: 1.2em 0;
+ }
+ .footer-images img {
+   /* max-width: 500px; */
+   height: 150px;
+   display: block;
+ }
+ .footer li {
+   margin: 0.4em 0;
+ }
 
 /* Modal styles */
 .modal {
@@ -85,6 +115,7 @@ h1, h2, h3, h4, h5, h6 {
       <a href="#history" class="w3-bar-item w3-button">History</a>
       <a href="#Schedule" class="w3-bar-item w3-button">Schedule</a>
       <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+      <a href="#special-thanks" class="w3-bar-item w3-button">Special Thanks</a>
     </div>
     <!-- Mobile menu button -->
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="toggleMobileMenu()">&#9776;</a>
@@ -187,6 +218,19 @@ h1, h2, h3, h4, h5, h6 {
   
 <!-- End page content -->
 </div>
+
+<!-- Footer -->
+<footer class="footer" id="special-thanks">
+  <h2>Special Thanks</h2>
+  <h2>特別致謝</h2>
+  <div class="footer-images">
+    <img src="resource/cultural_office.png" alt="Cultural Office logo">
+    <img src="resource/ding-go.png" alt="Ding Go logo">
+  </div>
+  <ul>
+    <li>And all volunteers, supporters, and community partners</li>
+  </ul>
+</footer>
 
 <!-- Modal for enlarged image -->
 <div id="imageModal" class="modal">
