@@ -100,6 +100,53 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
+/* Schedule table styles */
+.schedule-table-wrapper {
+  overflow-x: auto;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 18px;
+}
+
+.schedule-table th,
+.schedule-table td {
+  border: 1px solid #555;
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.schedule-table th {
+  background-color: #efefef;
+}
+
+.schedule-date {
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.matchup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.team-with-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.team-logo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
 /* Mobile responsiveness improvements */
 @media screen and (max-width: 600px) {
   .w3-bar-item {
@@ -199,18 +246,113 @@ h1, h2, h3, h4, h5, h6 {
   
   <hr>
 
-    <!-- Schedule Section -->
+  <!-- Schedule Section -->
   <div class="w3-row w3-padding-64" id="Schedule">
-    <div class="w3-col l6 w3-padding-large">
+    <div class="w3-col l12 w3-padding-large">
       <h1 class="w3-center">Schedule</h1><br>
-      <p class="w3-large">
-        敬請期待
-      </p>
-      <p class="w3-large w3-text-grey w3-hide-medium">
-        Coming Soon
-      </p>
-    </div>
-    <div class="w3-col l6 w3-padding-large">
+      <div class="schedule-table-wrapper">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Timeframe</th>
+              <th>Field #A</th>
+              <th>Field #B</th>
+              <th>Batting Cage</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="4" class="schedule-date">Sat. 5/9</td>
+              <td>9:00 - 11:15</td>
+              <td>
+                <span class="matchup">
+                  <span class="team-with-logo"><img class="team-logo" src="resource/Manatees.webp" alt="Manatees logo">Manatees</span>
+                  @
+                  <span class="team-with-logo"><img class="team-logo" src="resource/TNT.png" alt="TNT logo">TNT</span>
+                </span>
+              </td>
+              <td>No Game:</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>11:30 -12:30</td>
+              <td colspan="3">Lunch time: taco truck</td>
+            </tr>
+            <tr>
+              <td>13:00 - 15:15</td>
+              <td>
+                <span class="matchup">
+                  <span class="team-with-logo"><img class="team-logo" src="resource/LA_Taiwanese.png" alt="SoCal TW logo">SoCal TW</span>
+                  @
+                  <span class="team-with-logo"><img class="team-logo" src="resource/Bay_Area_Formosans.png" alt="Formosan logo">Formosan</span>
+                </span>
+              </td>
+              <td>
+                <span class="matchup">
+                  <span class="team-with-logo"><img class="team-logo" src="resource/LA_TW_HeyGo.png" alt="HeyGo logo">HeyGo</span>
+                  @
+                  <span class="team-with-logo"><img class="team-logo" src="resource/Manatees.webp" alt="Manatees logo">Manatees</span>
+                </span>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>15:45 - 18:00</td>
+              <td>
+                <span class="matchup">
+                  <span class="team-with-logo"><img class="team-logo" src="resource/TNT.png" alt="TNT logo">TNT</span>
+                  @
+                  <span class="team-with-logo"><img class="team-logo" src="resource/LA_Taiwanese.png" alt="SoCal TW logo">SoCal TW</span>
+                </span>
+              </td>
+              <td>
+                <span class="matchup">
+                  <span class="team-with-logo"><img class="team-logo" src="resource/Bay_Area_Formosans.png" alt="Formosan logo">Formosan</span>
+                  @
+                  <span class="team-with-logo"><img class="team-logo" src="resource/LA_TW_HeyGo.png" alt="HeyGo logo">HeyGo</span>
+                </span>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td rowspan="3" class="schedule-date">Sun. 5/10</td>
+              <td>9:00 - 11:15</td>
+              <td>No Game: reserved by others</td>
+              <td>
+                <span class="matchup">
+                  <span class="team-with-logo"><img class="team-logo" src="resource/Manatees.webp" alt="Manatees logo">Manatees</span>
+                  @
+                  <span class="team-with-logo"><img class="team-logo" src="resource/Bay_Area_Formosans.png" alt="Formosan logo">Formosan</span>
+                </span>
+              </td>
+              <td>Reserved by others</td>
+            </tr>
+            <tr>
+              <td>11:30 -12:30</td>
+              <td colspan="3">Lunch time: lunch box</td>
+            </tr>
+            <tr>
+              <td>12:30 - 15:00</td>
+              <td>
+                <span class="matchup">
+                  <span class="team-with-logo"><img class="team-logo" src="resource/LA_Taiwanese.png" alt="SoCal TW logo">SoCal TW</span>
+                  @
+                  <span class="team-with-logo"><img class="team-logo" src="resource/Manatees.webp" alt="Manatees logo">Manatees</span>
+                </span>
+              </td>
+              <td>
+                <span class="matchup">
+                  <span class="team-with-logo"><img class="team-logo" src="resource/TNT.png" alt="TNT logo">TNT</span>
+                  @
+                  <span class="team-with-logo"><img class="team-logo" src="resource/LA_TW_HeyGo.png" alt="HeyGo logo">HeyGo</span>
+                </span>
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 
