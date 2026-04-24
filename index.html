@@ -142,9 +142,45 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .team-logo {
-  width: 24px;
-  height: 24px;
+  width: 45px;
+  height: 45px;
   object-fit: contain;
+}
+
+.circular-logo {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.advertise-logo {
+  width: 120px;
+  height: 120px;
+}
+
+.instagram-embed-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 10px;
+  color: #c13584;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.instagram-embed-link:hover {
+  text-decoration: underline;
+}
+
+.lunch-advertise-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.lunch-advertise-center .instagram-embed-link {
+  margin-left: 0;
 }
 
 /* Mobile responsiveness improvements */
@@ -254,11 +290,11 @@ h1, h2, h3, h4, h5, h6 {
         <table class="schedule-table">
           <thead>
             <tr>
-              <th>Date</th>
-              <th>Timeframe</th>
-              <th>Field #A</th>
-              <th>Field #B</th>
-              <th>Batting Cage</th>
+              <th>Date<br>日期</th>
+              <th>Time<br>時間</th>
+              <th>Field A<br>A球場</th>
+              <th>Field B<br>B球場</th>
+              <th>Batting Cage<br>打擊練習區</th>
             </tr>
           </thead>
           <tbody>
@@ -272,12 +308,23 @@ h1, h2, h3, h4, h5, h6 {
                   <span class="team-with-logo"><img class="team-logo" src="resource/TNT.png" alt="TNT logo">TNT</span>
                 </span>
               </td>
-              <td>No Game:</td>
-              <td></td>
+              <td>No Game: practice available<br>本時段無比賽：可練習</td>
+              <td>Available<br>可用</td>
             </tr>
             <tr>
               <td>11:30 -12:30</td>
-              <td colspan="3">Lunch time: taco truck</td>
+              <td colspan="2">
+                <div class="lunch-advertise-center">
+                  <img class="advertise-logo circular-logo" src="resource/zoes_place.jpg" alt="Zoe's Place logo">
+                  <a class="instagram-embed-link" href="https://www.instagram.com/zoesplaceinc/" target="_blank" rel="noopener noreferrer" aria-label="Visit Zoe's Place on Instagram">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <span>Zoe's Place</span>
+                  </a>
+                </div>
+                <p>Lunch Time: the real local mexican delight in San Diego, on our treat!
+                  <br>午餐時間: San Diego最好的墨西哥風味，我們請客！</p>
+              </td>
+              <td>Available<br>可用</td>
             </tr>
             <tr>
               <td>13:00 - 15:15</td>
@@ -295,7 +342,7 @@ h1, h2, h3, h4, h5, h6 {
                   <span class="team-with-logo"><img class="team-logo" src="resource/Manatees.webp" alt="Manatees logo">Manatees</span>
                 </span>
               </td>
-              <td></td>
+              <td>Available<br>可用</td>
             </tr>
             <tr>
               <td>15:45 - 18:00</td>
@@ -313,12 +360,12 @@ h1, h2, h3, h4, h5, h6 {
                   <span class="team-with-logo"><img class="team-logo" src="resource/LA_TW_HeyGo.png" alt="HeyGo logo">HeyGo</span>
                 </span>
               </td>
-              <td></td>
+              <td>Available<br>可用</td>
             </tr>
             <tr>
               <td rowspan="3" class="schedule-date">Sun. 5/10</td>
               <td>9:00 - 11:15</td>
-              <td>No Game: reserved by others</td>
+              <td>Reserved<br>已預留</td>
               <td>
                 <span class="matchup">
                   <span class="team-with-logo"><img class="team-logo" src="resource/Manatees.webp" alt="Manatees logo">Manatees</span>
@@ -326,11 +373,12 @@ h1, h2, h3, h4, h5, h6 {
                   <span class="team-with-logo"><img class="team-logo" src="resource/Bay_Area_Formosans.png" alt="Formosan logo">Formosan</span>
                 </span>
               </td>
-              <td>Reserved by others</td>
+              <td>Reserved<br>已預留</td>
             </tr>
             <tr>
               <td>11:30 -12:30</td>
-              <td colspan="3">Lunch time: lunch box</td>
+              <td colspan="2">Lunch Time<br>午餐時間</td>
+              <td>Available<br>可用</td>
             </tr>
             <tr>
               <td>12:30 - 15:00</td>
@@ -348,7 +396,7 @@ h1, h2, h3, h4, h5, h6 {
                   <span class="team-with-logo"><img class="team-logo" src="resource/LA_TW_HeyGo.png" alt="HeyGo logo">HeyGo</span>
                 </span>
               </td>
-              <td></td>
+              <td>Available<br>可用</td>
             </tr>
           </tbody>
         </table>
