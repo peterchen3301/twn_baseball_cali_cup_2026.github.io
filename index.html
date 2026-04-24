@@ -103,24 +103,33 @@ h1, h2, h3, h4, h5, h6 {
 /* Schedule table styles */
 .schedule-table-wrapper {
   overflow-x: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
 }
 
 .schedule-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 18px;
+  background-color: #ffffff;
 }
 
 .schedule-table th,
 .schedule-table td {
-  border: 1px solid #555;
+  border: 1px solid #e5e7eb;
   padding: 10px 12px;
   text-align: left;
-  vertical-align: top;
+  vertical-align: middle;
 }
 
 .schedule-table th {
-  background-color: #efefef;
+  background-color: #f8fafc;
+  color: #334155;
+  font-weight: 600;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+  background-color: #fcfdff;
 }
 
 .schedule-date {
@@ -183,6 +192,72 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 0;
 }
 
+.reserved-text {
+  color: #8b0000;
+  font-weight: 600;
+}
+
+.available-text {
+  color: #166534;
+  font-weight: 600;
+}
+
+.contact-card {
+  max-width: 520px;
+}
+
+.contact-name-zh {
+  margin: 0;
+  font-size: 28px;
+  font-family: "Playfair Display", "Times New Roman", serif;
+  letter-spacing: 1px;
+  color: #111827;
+}
+
+.contact-name-en {
+  margin: 6px 0 18px;
+  font-size: 18px;
+  font-family: "Trend Sans One", Arial, sans-serif;
+  letter-spacing: 0.5px;
+  color: #4b5563;
+}
+
+.contact-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-family: "Trend Sans One", Arial, sans-serif;
+  color: #0f172a;
+  text-decoration: none;
+}
+
+.contact-email:hover {
+  color: #1d4ed8;
+}
+
+.venue-media {
+  margin-top: 28px;
+  text-align: center;
+}
+
+.venue-media img {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+}
+
+.venue-map {
+  width: 100%;
+  max-width: 350px;
+  height: 160px;
+  border: 0;
+  border-radius: 10px;
+  margin-top: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+}
+
 /* Mobile responsiveness improvements */
 @media screen and (max-width: 600px) {
   .w3-bar-item {
@@ -198,6 +273,18 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 32px !important;
     padding-bottom: 32px !important;
   }
+
+  .contact-name-zh {
+    font-size: 24px;
+  }
+
+  .contact-name-en {
+    font-size: 16px;
+  }
+
+  .contact-email {
+    font-size: 16px;
+  }
 }
 </style>
 </head>
@@ -212,6 +299,7 @@ h1, h2, h3, h4, h5, h6 {
       <a href="#About" class="w3-bar-item w3-button">About</a>
       <a href="#history" class="w3-bar-item w3-button">History</a>
       <a href="#Schedule" class="w3-bar-item w3-button">Schedule</a>
+      <a href="#Rules" class="w3-bar-item w3-button">Rules</a>
       <a href="#contact" class="w3-bar-item w3-button">Contact</a>
       <a href="#special-thanks" class="w3-bar-item w3-button">Special Thanks</a>
     </div>
@@ -308,11 +396,11 @@ h1, h2, h3, h4, h5, h6 {
                   <span class="team-with-logo"><img class="team-logo" src="resource/TNT.png" alt="TNT logo">TNT</span>
                 </span>
               </td>
-              <td>No Game: practice available<br>本時段無比賽：可練習</td>
-              <td>Available<br>可用</td>
+              <td class="available-text">No Game: practice available<br>本時段無比賽：可練習</td>
+              <td class="available-text">Available<br>可用</td>
             </tr>
             <tr>
-              <td>11:30 -12:30</td>
+              <td>11:00 -15:00</td>
               <td colspan="2">
                 <div class="lunch-advertise-center">
                   <img class="advertise-logo circular-logo" src="resource/zoes_place.jpg" alt="Zoe's Place logo">
@@ -321,10 +409,10 @@ h1, h2, h3, h4, h5, h6 {
                     <span>Zoe's Place</span>
                   </a>
                 </div>
-                <p>Lunch Time: the real local mexican delight in San Diego, on our treat!
-                  <br>午餐時間: San Diego最好的墨西哥風味，我們請客！</p>
+                <p>Lunch Time: the real local mexican delight in San Diego, our treat!
+                  <br>午餐時間: San Diego 最好的墨西哥風味，我們請客！</p>
               </td>
-              <td>Available<br>可用</td>
+              <td class="available-text">Available<br>可用</td>
             </tr>
             <tr>
               <td>13:00 - 15:15</td>
@@ -342,7 +430,7 @@ h1, h2, h3, h4, h5, h6 {
                   <span class="team-with-logo"><img class="team-logo" src="resource/Manatees.webp" alt="Manatees logo">Manatees</span>
                 </span>
               </td>
-              <td>Available<br>可用</td>
+              <td class="available-text">Available<br>可用</td>
             </tr>
             <tr>
               <td>15:45 - 18:00</td>
@@ -360,12 +448,12 @@ h1, h2, h3, h4, h5, h6 {
                   <span class="team-with-logo"><img class="team-logo" src="resource/LA_TW_HeyGo.png" alt="HeyGo logo">HeyGo</span>
                 </span>
               </td>
-              <td>Available<br>可用</td>
+              <td class="available-text">Available<br>可用</td>
             </tr>
             <tr>
               <td rowspan="3" class="schedule-date">Sun. 5/10</td>
               <td>9:00 - 11:15</td>
-              <td>Reserved<br>已預留</td>
+              <td class="reserved-text">Reserved<br>已預留</td>
               <td>
                 <span class="matchup">
                   <span class="team-with-logo"><img class="team-logo" src="resource/Manatees.webp" alt="Manatees logo">Manatees</span>
@@ -373,12 +461,12 @@ h1, h2, h3, h4, h5, h6 {
                   <span class="team-with-logo"><img class="team-logo" src="resource/Bay_Area_Formosans.png" alt="Formosan logo">Formosan</span>
                 </span>
               </td>
-              <td>Reserved<br>已預留</td>
+              <td class="reserved-text">Reserved<br>已預留</td>
             </tr>
             <tr>
               <td>11:30 -12:30</td>
               <td colspan="2">Lunch Time<br>午餐時間</td>
-              <td>Available<br>可用</td>
+              <td class="available-text">Available<br>可用</td>
             </tr>
             <tr>
               <td>12:30 - 15:00</td>
@@ -396,25 +484,40 @@ h1, h2, h3, h4, h5, h6 {
                   <span class="team-with-logo"><img class="team-logo" src="resource/LA_TW_HeyGo.png" alt="HeyGo logo">HeyGo</span>
                 </span>
               </td>
-              <td>Available<br>可用</td>
+              <td class="available-text">Available<br>可用</td>
             </tr>
           </tbody>
         </table>
+      </div>
+      <div class="venue-media">
+        <img src="resource/ballpark_view.png" alt="San Dieguito Sports Complex field view">
+        <iframe class="venue-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4113.868500499711!2d-117.2542495!3d33.073986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc0b70fa36d1e1%3A0xb5961f0d2e47b026!2sSan%20Dieguito%20Sports%20Complex!5e1!3m2!1sen!2sus!4v1777024801861!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </div>
 
   <hr>
+
+   <!-- Contact Section -->
+   <div class="w3-container w3-padding-64" id="contact">
+    <h1>Rules & Regulations</h1><br>
+    <p class="w3-large">
+      <ul>
+        <p>To be Announced<br>敬請期待</p>
+  </div>
   
 
 
   <!-- Contact Section -->
   <div class="w3-container w3-padding-64" id="contact">
     <h1>Contact</h1><br>
-    <div class="w3-col l6 w3-padding-large">
-      <p class="w3-hide-medium">陳星宇 </p>
-      <p class="w3-text-grey w3-hide-medium">Hsing-Yu Chen (Peter) </p>
-      <i class="fa fa-envelope" style="width:30px"> </i> peterchen33011@gmail.com<br>
+    <div class="w3-col l6 w3-padding-large contact-card">
+      <p class="contact-name-zh">陳星宇</p>
+      <p class="contact-name-en">Hsing-Yu Chen (Peter)</p>
+      <a class="contact-email" href="mailto:peterchen33011@gmail.com">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+        <span>peterchen33011@gmail.com</span>
+      </a>
     </div>
   </div>
     
