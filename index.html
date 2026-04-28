@@ -206,6 +206,78 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 520px;
 }
 
+.regulations-intro {
+  margin: 0 0 24px;
+  color: #4b5563;
+  line-height: 1.75;
+}
+
+.regulations-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 18px;
+}
+
+.regulation-item {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px 22px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+}
+
+.regulation-title {
+  margin: 0 0 6px;
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: #111827;
+}
+
+.regulation-title-en {
+  margin: 0 0 14px;
+  font-size: 14px;
+  font-family: "Trend Sans One", Arial, sans-serif;
+  letter-spacing: 1px;
+  color: #6b7280;
+}
+
+.regulation-points {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.regulation-points li {
+  margin-bottom: 10px;
+  line-height: 1.75;
+}
+
+.regulation-points li:last-child {
+  margin-bottom: 0;
+}
+
+.regulation-zh {
+  display: block;
+  color: #1f2937;
+}
+
+.regulation-en {
+  display: block;
+  margin-top: 2px;
+  color: #6b7280;
+  font-size: 16px;
+}
+
+.regulation-sublist {
+  margin-top: 12px;
+  padding-left: 22px;
+}
+
+.regulation-sublist li {
+  margin-bottom: 10px;
+}
+
 .contact-name-zh {
   margin: 0;
   font-size: 28px;
@@ -310,6 +382,22 @@ h1, h2, h3, h4, h5, h6 {
   .advertise-logo {
     width: 84px;
     height: 84px;
+  }
+
+  .regulation-item {
+    padding: 16px 16px 18px;
+  }
+
+  .regulation-title {
+    font-size: 20px;
+  }
+
+  .regulation-title-en {
+    font-size: 13px;
+  }
+
+  .regulation-en {
+    font-size: 15px;
   }
 }
 </style>
@@ -529,9 +617,138 @@ h1, h2, h3, h4, h5, h6 {
    <!-- Contact Section -->
    <div class="w3-container w3-padding-64" id="Regulations">
     <h1>Regulations</h1><br>
-    <p class="w3-large">
-      <ul>
-        <p>To be Announced<br>敬請期待</p>
+    <p class="w3-large regulations-intro">
+      以下為本屆加州盃之補充競賽規則。若有未盡事宜，主辦單位將依現場狀況與裁判判定辦理。<br>
+      The following are the supplemental regulations for this year's California Cup. Matters not covered here will be determined by the organizer and umpires based on game conditions.
+    </p>
+    <ol class="regulations-list">
+      <li class="regulation-item">
+        <h3 class="regulation-title">一、球員資格</h3>
+        <p class="regulation-title-en">1. Player Eligibility</p>
+        <ul class="regulation-points">
+          <li>
+            <span class="regulation-zh">所有球員於比賽開始當日須年滿18歲。</span>
+            <span class="regulation-en">All players must be at least 18 years old on the day the game begins.</span>
+          </li>
+        </ul>
+      </li>
+      <li class="regulation-item">
+        <h3 class="regulation-title">二、比賽時間限制</h3>
+        <p class="regulation-title-en">2. Game Time Limits</p>
+        <ul class="regulation-points">
+          <li>
+            <span class="regulation-zh">比賽進行至2小時15分時，不再開始新的一局。</span>
+            <span class="regulation-en">No new inning may begin once the game reaches 2 hours and 15 minutes.</span>
+          </li>
+          <li>
+            <span class="regulation-zh">比賽進行至2小時30分時，立即進入該局的最後一個打席；該打席結束後比賽強制終止。</span>
+            <span class="regulation-en">At 2 hours and 30 minutes, play immediately moves to the final plate appearance of the current inning, and the game is terminated when that plate appearance ends.</span>
+          </li>
+          <li>
+            <span class="regulation-zh">若因天候或其他不可抗力因素中斷，時間裁定由主辦單位依情況調整。</span>
+            <span class="regulation-en">If play is interrupted by weather or other force majeure, the organizer may adjust the timing rules as appropriate.</span>
+          </li>
+        </ul>
+      </li>
+      <li class="regulation-item">
+        <h3 class="regulation-title">三、攻守名單與教練權限</h3>
+        <p class="regulation-title-en">3. Lineup Exchange and Coach Authority</p>
+        <ul class="regulation-points">
+          <li>
+            <span class="regulation-zh">開賽前雙方須交換攻守名單，並於名單中指定一位教練。</span>
+            <span class="regulation-en">Before the game, both teams must exchange lineups and designate one coach on the lineup card.</span>
+          </li>
+          <li>
+            <span class="regulation-zh">僅有教練得向裁判提出詢問、抗議、或進行球員更換。</span>
+            <span class="regulation-en">Only the designated coach may address the umpires for questions, protests, or player substitutions.</span>
+          </li>
+          <li>
+            <span class="regulation-zh">若教練因故離場，球隊須立即指定下一位教練接任。</span>
+            <span class="regulation-en">If the coach leaves for any reason, the team must immediately appoint a replacement coach.</span>
+          </li>
+        </ul>
+      </li>
+      <li class="regulation-item">
+        <h3 class="regulation-title">四、打線與守備規定</h3>
+        <p class="regulation-title-en">4. Batting Order and Defensive Alignment</p>
+        <ul class="regulation-points">
+          <li>
+            <span class="regulation-zh">開賽前須提交先發打線，至少9人，上限不限。</span>
+            <span class="regulation-en">Each team must submit a starting batting order before the game with at least 9 players and no maximum limit.</span>
+          </li>
+          <li>
+            <span class="regulation-zh">比賽開始後，打線人數不得增減。</span>
+            <span class="regulation-en">Once the game begins, the number of players in the batting order may not be increased or decreased.</span>
+          </li>
+          <li>
+            <span class="regulation-zh">守備球員必須從該打線中指派，上場次數不限。</span>
+            <span class="regulation-en">Defensive players must be selected from the batting order, and defensive substitutions are otherwise unlimited.</span>
+          </li>
+          <li>
+            <span class="regulation-zh">若球員自打線名單中移除，該球員於本場比賽中不得再重新加入打線名單中，除非獲得主審與對方教練共同同意。</span>
+            <span class="regulation-en">If a player is removed from the batting order, that player may not re-enter the batting order in the same game unless both the plate umpire and the opposing coach approve.</span>
+          </li>
+        </ul>
+      </li>
+      <li class="regulation-item">
+        <h3 class="regulation-title">五、二出局代跑規定</h3>
+        <p class="regulation-title-en">5. Courtesy Runner with Two Outs</p>
+        <ul class="regulation-points">
+          <li>
+            <span class="regulation-zh">當局二出局後，若投手或捕手成為跑者，球隊得指定代跑。</span>
+            <span class="regulation-en">After two outs in an inning, a team may use a courtesy runner if the pitcher or catcher becomes a baserunner.</span>
+          </li>
+          <li>
+            <span class="regulation-zh">代跑不視為上場紀錄，因此不受第四條打線名單限制。</span>
+            <span class="regulation-en">A courtesy runner does not count as an official appearance and is therefore not restricted by Rule 4 regarding the batting order.</span>
+          </li>
+        </ul>
+      </li>
+      <li class="regulation-item">
+        <h3 class="regulation-title">六、場地界線與全壘打判定</h3>
+        <p class="regulation-title-en">6. Field Boundaries and Home Run Rulings</p>
+        <ul class="regulation-points">
+          <li>
+            <span class="regulation-zh">本場地無全壘打牆，若擊球直接飛出天然界線（草皮區外），視為全壘打。</span>
+            <span class="regulation-en">This field has no outfield home run fence. A fair ball that flies directly beyond the natural boundary, outside the grass area, is ruled a home run.</span>
+          </li>
+          <li>
+            <span class="regulation-zh">若界內滾地球滾出天然界線（草皮區外），依場地規則處理。</span>
+            <span class="regulation-en">A fair ground ball that rolls beyond the natural boundary, outside the grass area, will be handled under the applicable ground rules.</span>
+          </li>
+        </ul>
+      </li>
+      <li class="regulation-item">
+        <h3 class="regulation-title">七、球員不足之裁定</h3>
+        <p class="regulation-title-en">7. Inability to Continue Due to Short Roster</p>
+        <ul class="regulation-points">
+          <li>
+            <span class="regulation-zh">若球隊因球員不足而無法繼續比賽，則裁定比賽以0：7結束。</span>
+            <span class="regulation-en">If a team cannot continue the game due to insufficient players, the game will be ruled a 0-7 loss.</span>
+          </li>
+        </ul>
+      </li>
+      <li class="regulation-item">
+        <h3 class="regulation-title">八、沿用 WBSC / MLB OBR 之補充規則</h3>
+        <p class="regulation-title-en">8. Supplemental Rules Adopted from WBSC / MLB OBR</p>
+        <ul class="regulation-points">
+          <li>
+            <span class="regulation-zh">投手練投：新上場投手最多8球，續投投手最多5球，主審可因傷停或延誤情況酌情增加。</span>
+            <span class="regulation-en">Warm-up pitches: a new pitcher may throw up to 8 warm-up pitches, and a returning pitcher may throw up to 5. The plate umpire may allow more in cases of injury or delay.</span>
+          </li>
+          <li>
+            <span class="regulation-zh">投手丘訪問：每隊每場比賽有5次訪問投手丘的機會。若次數用盡後仍訪問投手丘，則必須更換投手。</span>
+            <span class="regulation-en">Mound visits: each team is allowed 5 mound visits per game. If a team makes another mound visit after using all 5, the pitcher must be replaced.</span>
+            <ul class="regulation-sublist">
+              <li>
+                <span class="regulation-zh">以下情況不列入訪問次數：捕手與投手在守備中短暫交談、因傷暫停、更換投手、攻方請求暫停所造成的投捕交談。</span>
+                <span class="regulation-en">The following do not count as mound visits: brief catcher-pitcher communication during normal defense, injury timeouts, pitching changes, or catcher-pitcher discussions caused by an offensive timeout request.</span>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ol>
   </div>
   
 
