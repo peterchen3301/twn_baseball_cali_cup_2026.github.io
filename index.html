@@ -30,9 +30,11 @@ h1, h2, h3, h4, h5, h6 {
  }
  .footer-images {
    display: flex;
-   justify-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
    gap: 1rem;
-   flex-wrap: wrap;
+  flex-wrap: nowrap;
    margin: 1.2em 0;
  }
  .footer-images img {
@@ -40,6 +42,18 @@ h1, h2, h3, h4, h5, h6 {
    height: 150px;
    display: block;
  }
+
+.footer-logo-small {
+  height: 110px !important;
+  display: block; 
+  margin-bottom: 8px; 
+
+}
+
+.footer-logo-poster {
+  height: 240px !important;
+}
+
  .footer li {
    margin: 0.4em 0;
  }
@@ -48,6 +62,16 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 600px) {
   .footer-images img {
     height: 80px;
+  }
+
+  .footer-logo-small {
+    height: 68px !important;
+    display: block; 
+    margin-bottom: 5px; 
+  }
+
+  .footer-logo-poster {
+    height: 130px !important;
   }
   
   .footer {
@@ -843,8 +867,9 @@ h1, h2, h3, h4, h5, h6 {
   <h2>Special Thanks</h2>
   <h2>特別致謝</h2>
   <div class="footer-images">
-    <img src="resource/cultural_office.png" alt="Cultural Office logo">
-    <img src="resource/ding-go.png" alt="Ding Go logo">
+    <img class="footer-logo-small" src="resource/cultural_office.png" alt="Cultural Office logo">
+    <img class="footer-logo-small" src="resource/UCSD_TW_Study.png" alt="UCSD TW Study logo">
+    <img class="footer-logo-small" src="resource/ding-go.png" alt="Ding Go logo">
   </div>
 </footer>
 
