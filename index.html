@@ -243,6 +243,119 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.6;
 }
 
+.ranking-block {
+  margin-top: 28px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.ranking-block h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 16px;
+}
+
+.ranking-heading-en {
+  display: block;
+  font-size: 18px;
+  font-weight: 400;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.ranking-list {
+  display: inline-block;
+  text-align: left;
+  margin: 0;
+  padding-left: 1.4em;
+  line-height: 1.6;
+}
+
+.ranking-list li {
+  margin-bottom: 12px;
+}
+
+.ranking-list li:last-child {
+  margin-bottom: 0;
+}
+
+.ranking-zh {
+  display: block;
+  color: #1f2937;
+}
+
+.ranking-en {
+  display: block;
+  margin-top: 2px;
+  color: #6b7280;
+  font-size: 16px;
+}
+
+.ranking-note {
+  margin-top: 28px;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #52525b;
+}
+
+.ranking-note h3 {
+  text-align: center;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  font-style: normal;
+  color: #374151;
+  margin: 0 0 14px;
+}
+
+.ranking-note h3 .ranking-heading-en {
+  font-size: 13px;
+}
+
+.ranking-note-intro {
+  margin: 0 0 10px;
+}
+
+.ranking-note-rules {
+  margin: 0 0 14px;
+  padding-left: 1.3em;
+}
+
+.ranking-note-rules li {
+  margin-bottom: 6px;
+}
+
+.ranking-note-rules li:last-child {
+  margin-bottom: 0;
+}
+
+.ranking-note-formula {
+  margin: 8px 0 0;
+  padding: 8px 10px;
+  font-size: 12px;
+  line-height: 1.55;
+  color: #64748b;
+  background-color: #f8fafc;
+  border-radius: 4px;
+}
+
+.ranking-note-outcome {
+  margin: 0;
+}
+
+.ranking-note-block-en {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #e5e7eb;
+  font-size: 13px;
+  color: #6b7280;
+}
+
 .contact-card {
   max-width: 520px;
 }
@@ -473,7 +586,7 @@ h1, h2, h3, h4, h5, h6 {
     <div class="w3-right w3-hide-small">
       <a href="#About" class="w3-bar-item w3-button">About</a>
       <a href="#history" class="w3-bar-item w3-button">History</a>
-      <a href="#Schedule" class="w3-bar-item w3-button">Schedule</a>
+      <a href="#Match-Result" class="w3-bar-item w3-button">Match Result</a>
       <a href="#Location" class="w3-bar-item w3-button">Location</a>
       <a href="#Regulations" class="w3-bar-item w3-button">Regulations</a>
       <a href="#contact" class="w3-bar-item w3-button">Contact</a>
@@ -486,7 +599,7 @@ h1, h2, h3, h4, h5, h6 {
   <div id="mobileMenu" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
     <a href="#About" class="w3-bar-item w3-button" onclick="toggleMobileMenu()">About</a>
     <a href="#history" class="w3-bar-item w3-button" onclick="toggleMobileMenu()">History</a>
-    <a href="#Schedule" class="w3-bar-item w3-button" onclick="toggleMobileMenu()">Schedule</a>
+    <a href="#Match-Result" class="w3-bar-item w3-button" onclick="toggleMobileMenu()">Match Result</a>
     <a href="#Location" class="w3-bar-item w3-button" onclick="toggleMobileMenu()">Location</a>
     <a href="#Regulations" class="w3-bar-item w3-button" onclick="toggleMobileMenu()">Regulations</a>
     <a href="#contact" class="w3-bar-item w3-button" onclick="toggleMobileMenu()">Contact</a>
@@ -549,10 +662,10 @@ h1, h2, h3, h4, h5, h6 {
   
   <hr>
 
-  <!-- Schedule Section -->
-  <div class="w3-row w3-padding-64" id="Schedule">
+  <!-- Match Result Section -->
+  <div class="w3-row w3-padding-64" id="Match-Result">
     <div class="w3-col l12 w3-padding-large">
-      <h1 class="w3-center">Schedule</h1><br>
+      <h1 class="w3-center">Match Result</h1><br>
       <div class="schedule-table-wrapper">
         <table class="schedule-table">
           <thead>
@@ -561,7 +674,6 @@ h1, h2, h3, h4, h5, h6 {
               <th>Time<br>時間</th>
               <th>Field A<br>A球場</th>
               <th>Field B<br>B球場</th>
-              <th>Batting Cage<br>打擊練習區</th>
             </tr>
           </thead>
           <tbody>
@@ -571,12 +683,11 @@ h1, h2, h3, h4, h5, h6 {
               <td>
                 <span class="matchup">
                   <span class="team-with-logo"><img class="team-logo" src="resource/Manatees.webp" alt="Manatees logo">Manatees</span>
-                  @
+                  1:10
                   <span class="team-with-logo"><img class="team-logo" src="resource/TNT.png" alt="TNT logo">TNT</span>
                 </span>
               </td>
-              <td class="available-text">No Game: practice available<br>本時段無比賽：可練習</td>
-              <td class="available-text">Available<br>可用</td>
+              <td class="available-text">No Game<br>本時段無比賽</td>
             </tr>
             <tr>
               <td>11:00 -15:00</td>
@@ -591,43 +702,40 @@ h1, h2, h3, h4, h5, h6 {
                 <p>Lunch Time: the real local mexican delight in San Diego, our treat!
                   <br>午餐時間: San Diego 最好的墨西哥風味，我們請客！</p>
               </td>
-              <td class="available-text">Available<br>可用</td>
             </tr>
             <tr>
               <td>13:00 - 15:15</td>
               <td>
                 <span class="matchup">
                   <span class="team-with-logo"><img class="team-logo" src="resource/LA_Taiwanese.png" alt="SoCal TW logo">SoCal TW</span>
-                  @
+                  2:5
                   <span class="team-with-logo"><img class="team-logo" src="resource/Bay_Area_Formosans.png" alt="Formosan logo">Formosan</span>
                 </span>
               </td>
               <td>
                 <span class="matchup">
                   <span class="team-with-logo"><img class="team-logo" src="resource/LA_TW_HeyGo.png" alt="HeyGo logo">HeyGo</span>
-                  @
+                  17:9
                   <span class="team-with-logo"><img class="team-logo" src="resource/Manatees.webp" alt="Manatees logo">Manatees</span>
                 </span>
               </td>
-              <td class="available-text">Available<br>可用</td>
             </tr>
             <tr>
               <td>15:45 - 18:00</td>
               <td>
                 <span class="matchup">
                   <span class="team-with-logo"><img class="team-logo" src="resource/TNT.png" alt="TNT logo">TNT</span>
-                  @
+                  11:4
                   <span class="team-with-logo"><img class="team-logo" src="resource/LA_Taiwanese.png" alt="SoCal TW logo">SoCal TW</span>
                 </span>
               </td>
               <td>
                 <span class="matchup">
                   <span class="team-with-logo"><img class="team-logo" src="resource/Bay_Area_Formosans.png" alt="Formosan logo">Formosan</span>
-                  @
+                  8:8
                   <span class="team-with-logo"><img class="team-logo" src="resource/LA_TW_HeyGo.png" alt="HeyGo logo">HeyGo</span>
                 </span>
               </td>
-              <td class="available-text">Available<br>可用</td>
             </tr>
             <tr>
               <td rowspan="3" class="schedule-date">Sun. 5/10</td>
@@ -636,11 +744,10 @@ h1, h2, h3, h4, h5, h6 {
               <td>
                 <span class="matchup">
                   <span class="team-with-logo"><img class="team-logo" src="resource/Manatees.webp" alt="Manatees logo">Manatees</span>
-                  @
+                  3:9
                   <span class="team-with-logo"><img class="team-logo" src="resource/Bay_Area_Formosans.png" alt="Formosan logo">Formosan</span>
                 </span>
               </td>
-              <td class="reserved-text">Reserved<br>已預留</td>
             </tr>
             <tr>
               <td>11:30 -12:30</td>
@@ -648,33 +755,99 @@ h1, h2, h3, h4, h5, h6 {
                 Lunch Time<br>
                 午餐時間<br>
                 <span class="schedule-note-soft">
-                  特別感謝橙縣華僑文教服務中心 蕭蓓如主任與聖地牙哥台灣商會 李真琪會長蒞臨指導<br>
+                  特別感謝橙縣華僑文教服務中心 蕭蓓如主任、聖地牙哥台灣商會 李真琪會長、聖地牙哥中華文化聯誼會 林玉惠會長蒞臨指導<br>
                   Special thanks to Director Pei-Ju Hsiao of the Orange County Taiwanese Cultural and 
-                  Education Center, and President Emily Lee of the TCCSD, for honoring us with their guidance.
+                  Education Center, President Emily Lee of the TCCSD, and President Jill Lin of the San Diego Chinese Cultural Association, for honoring us with their guidance.
                 </span>
               </td>
-              <td class="available-text">Available<br>可用</td>
             </tr>
             <tr>
               <td>12:30 - 15:00</td>
               <td>
                 <span class="matchup">
                   <span class="team-with-logo"><img class="team-logo" src="resource/LA_Taiwanese.png" alt="SoCal TW logo">SoCal TW</span>
-                  @
+                  4:5
                   <span class="team-with-logo"><img class="team-logo" src="resource/Manatees.webp" alt="Manatees logo">Manatees</span>
                 </span>
               </td>
               <td>
                 <span class="matchup">
                   <span class="team-with-logo"><img class="team-logo" src="resource/TNT.png" alt="TNT logo">TNT</span>
-                  @
+                  6:15
                   <span class="team-with-logo"><img class="team-logo" src="resource/LA_TW_HeyGo.png" alt="HeyGo logo">HeyGo</span>
                 </span>
               </td>
-              <td class="available-text">Available<br>可用</td>
             </tr>
           </tbody>
         </table>
+      </div>
+      <div class="ranking-block">
+        <h2>排名<span class="ranking-heading-en">Ranking</span></h2>
+        <ol class="ranking-list">
+          <li>
+            <span class="ranking-zh">Formosans：2勝0敗1和</span>
+            <span class="ranking-en">Formosans: 2 wins, 0 losses, 1 tie</span>
+          </li>
+          <li>
+            <span class="ranking-zh">HeyGo：2勝0敗1和</span>
+            <span class="ranking-en">HeyGo: 2 wins, 0 losses, 1 tie</span>
+          </li>
+          <li>
+            <span class="ranking-zh">TNT：2勝1敗</span>
+            <span class="ranking-en">TNT: 2 wins, 1 loss</span>
+          </li>
+          <li>
+            <span class="ranking-zh">Manatees：1勝3敗</span>
+            <span class="ranking-en">Manatees: 1 win, 3 losses</span>
+          </li>
+          <li>
+            <span class="ranking-zh">SoCal TW：0勝3敗</span>
+            <span class="ranking-en">SoCal TW: 0 wins, 3 losses</span>
+          </li>
+        </ol>
+        <div class="ranking-note">
+          <h3>說明<span class="ranking-heading-en">Note</span></h3>
+          <p class="ranking-note-intro">根據WBSC棒球規則，若賽事結束後，兩隊戰績相同，則依照下列方式進行排名：</p>
+          <ol class="ranking-note-rules">
+            <li>戰績相同球隊之間贏得相互對戰比賽的球隊得以獲得較高排名。</li>
+            <li>戰績相同球隊之間對戰優質率（Team's Quality Balance，TQB）以及勝敗紀錄。</li>
+            <li>
+              擁有最佳責失分對戰優質率（Earned Runs Team's Quality Balance，ER-TQB）的球隊。
+              <p class="ranking-note-formula">
+                <strong>ER-TQB</strong> =（總責失得分 ÷ 進攻局數）−（總責失失分 ÷ 防守局數）
+              </p>
+            </li>
+            <li>戰績相同球隊間對戰比賽打擊率最高者。</li>
+            <li>丟擲銅板。</li>
+          </ol>
+          <p class="ranking-note-outcome">HeyGo與Formosans戰績相同，且對戰平手，所以使用規則3.:比較最佳責失分對戰優質率。
+            經統計，HeyGo與Formosans皆打完6局，且比數為8:8，然而HeyGo有7分責失，Formosans則有4分責失。根據公式計算，
+            HeyGo的ER-TQB為-0.5，Formosans的ER-TQB為0.5。根據此結果，本會認定Formosans榮獲2026加州盃台灣人棒球錦標賽
+            之冠軍。榮耀歸於Formosans，亦歸於所有參賽球隊。敬請知悉。</p>
+          <div class="ranking-note-block-en">
+            <p class="ranking-note-intro">According to WBSC baseball rules, if two teams finish with the same record after the tournament, ranking is determined as follows:</p>
+            <ol class="ranking-note-rules">
+              <li>Among tied teams, the team that wins the mutual head-to-head games receives the higher ranking.</li>
+              <li>Among tied teams, Team's Quality Balance (TQB) and win-loss record.</li>
+              <li>
+                The team with the best Earned Runs Team's Quality Balance (ER-TQB).
+                <p class="ranking-note-formula">
+                  <strong>ER-TQB</strong> = (Total Earned Runs Scored ÷ Innings Played on Offense)
+                  − (Total Earned Runs Allowed ÷ Innings Played on Defense)
+                </p>
+              </li>
+              <li>The team with the highest batting average in head-to-head games among tied teams.</li>
+              <li>Coin toss.</li>
+            </ol>
+            <p class="ranking-note-outcome">HeyGo and Formosans finished with the same record and their head-to-head
+               game ended in a tie, so criterion 3 (best ER-TQB) was applied. 
+               Both teams completed 6 innings with an 8:8 score; however, HeyGo 
+               allowed 7 earned runs while Formosans allowed 4 earned runs. By formula, 
+               HeyGo's ER-TQB is -0.5 and Formosans' ER-TQB is 0.5. Based on this result, 
+               the organization hence recognizes Formosans as champion of the 2026 Taiwanese Heritage California Cup. 
+               Kudo to Formosans and all the participant teams! Please be advised.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
